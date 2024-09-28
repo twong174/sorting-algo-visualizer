@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sorting Algorithm Visualizer</h1>
+
+        <!-- Controls Section -->
+        <div class="controls">
+            <label for="numbersInput">Enter numbers (comma-separated):</label>
+            <input type="text" id="numbersInput" placeholder="e.g. 10, 20, 1, 42">
+
+            <label for="algorithmSelect">Select Algorithm:</label>
+            <select id="algorithmSelect">
+                <option value="bubble">Bubble Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+            </select>
+
+            <label for="speedRange">Speed:</label>
+            <input type="range" id="speedRange" min="100" max="2000" value="500">
+
+            <div class="buttons">
+                <button id="sortBtn">Sort</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+
+        <!-- Error Message Section -->
+        <p id="errorMessage" style="color: red; display: none;"></p>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <p>Comparisons: <span id="comparisons">0</span></p>
+            <p>Swaps: <span id="swaps">0</span></p>
+        </div>
+
+        <!-- Visualization Bars -->
+        <div class="visualization">
+            <ul id="bars"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+}
+
+.buttons {
+  grid-column: span 2;
+}
+
+.visualization {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+#bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  list-style: none;
+}
+
+.bar {
+  background-color: teal;
+  margin: 0 2px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  transition: height 0.5s, background-color 0.5s;
+}
+
+.bar.comparing {
+  background-color: orange;
+}
+
+.bar.swapping {
+  background-color: red;
+}
+
+.bar.sorted {
+  background-color: green;
+}
+
+.bar.pivot {
+  background-color: purple;
+}
+
+.number-label {
+  position: absolute;
+  bottom: 5px;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.index-label {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+.stats {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.stats span {
+  font-weight: bold;
+}
+
+#errorMessage {
+  text-align: center;
+  font-weight: bold;
+}
+
+.algorithm-description {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+}
